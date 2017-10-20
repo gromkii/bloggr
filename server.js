@@ -2,7 +2,8 @@ var express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
   methodOverride = require('method-override'),
-  api = require('./routes/api');
+  api = require('./routes/api'),
+  port = process.env.PORT || 3000;
 
 app.use(express.static('public'))
   .use(bodyParser.json())
@@ -11,7 +12,7 @@ app.use(express.static('public'))
 
 app.use('/api', api);
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is listening.');
 })
 
