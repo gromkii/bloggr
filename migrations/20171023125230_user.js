@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments().primary().index(),
     table.text('username')
     table.timestamp('created_at').defaultTo(knex.fn.now())
-  })
+  });
 };
 
 exports.down = function(knex, Promise) {
