@@ -10,4 +10,4 @@ const Post = bookshelf.Model.extend({
   }
 });
 
-module.export = bookshelf.model('Post', Post);
+module.exports = bookshelf.model('Post', Post);

@@ -4,6 +4,7 @@ var express = require('express'),
   methodOverride = require('method-override'),
   api = require('./routes/api'),
   userRoutes = require('./routes/users'),
+  postRoutes = require('./routes/posts'),
   port = process.env.PORT || 3000;
 
 app.use(express.static('public'))
@@ -12,6 +13,7 @@ app.use(express.static('public'))
   .use(methodOverride('_method'));
 
 app.use('/api', api);
+app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 
 app.listen(port, () => {
