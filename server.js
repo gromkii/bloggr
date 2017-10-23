@@ -5,6 +5,7 @@ var express = require('express'),
   api = require('./routes/api'),
   userRoutes = require('./routes/users'),
   postRoutes = require('./routes/posts'),
+  commentRoutes = require('./routes/comments')
   port = process.env.PORT || 3000;
 
 app.use(express.static('public'))
@@ -15,6 +16,7 @@ app.use(express.static('public'))
 app.use('/api', api);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/comments', commentRoutes);
 
 app.listen(port, () => {
   console.log('Server is listening.');
