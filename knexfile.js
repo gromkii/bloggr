@@ -3,7 +3,7 @@
 module.exports = {
 
   development: {
-    client: 'postgres',
+    client: 'pg',
     connection: {
       database: 'bloggr_dev'
     }
@@ -35,6 +35,21 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     }
+  },
+  aws_env: {
+    client: 'pg',
+    connection: {
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      user: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds'
+    },
   }
-
 };

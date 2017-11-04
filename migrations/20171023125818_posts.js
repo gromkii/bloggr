@@ -8,7 +8,7 @@ exports.up = function(knex, Promise) {
       .inTable('users')
       .onDelete('cascade'),
     table.timestamp('created_at').defaultTo(knex.fn.now())
-  });
+  })
 };
 
 exports.down = function(knex, Promise) {
