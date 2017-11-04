@@ -1,7 +1,7 @@
 {
-  "scripts":{
+  "scripts": {
     "postinstall": "knex migrate:latest --env aws_env; knex seed:run",
-    "knex": "knex",
+    "knex": "knex"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
