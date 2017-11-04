@@ -46,10 +46,10 @@ module.exports = {
       database: process.env.DB_NAME,
     },
     migrations: {
-      directory: __dirname + '/db/migrations'
+      directory: __dirname + '/migrations'
     },
     seeds: {
-      directory: __dirname + '/db/seeds'
+      directory: __dirname + '/seeds'
     },
   }
 };
