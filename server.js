@@ -27,8 +27,7 @@ app.use('/api/comments', commentRoutes);
 
 app.listen(port, () => {
   console.log('Server is listening.');
-  consoel.log('Uhh: ' + process.env.DB_HOST);
-  consoel.log('Uhh: ' + process.env.PORT);
+  console.log(process.env.DB_HOST);
 })
 
 module.exports = app;
