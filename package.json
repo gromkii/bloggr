@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "prestart": "node ./node_modules/knex/lib/bin/cli.js migrate:latest",
-    "knex": "knex"
+    "postinstall":"knex migrate:latest; knex seed:run",
+    "knex":"knex"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
