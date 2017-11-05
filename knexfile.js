@@ -36,8 +36,9 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   },
+
   aws_env: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
       host: process.env.DB_HOST,
       port: process.env.DB_PORT,
@@ -50,6 +51,6 @@ module.exports = {
     },
     seeds: {
       directory: __dirname + '/seeds'
-    },
+    }
   }
 };
