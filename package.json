@@ -1,7 +1,7 @@
 {
   "scripts": {
     "db:migration:run": "knex migrate:latest",
-    "prestart":"knex migrate:latest",
+    "prestart":"knex migrate:latest --env aws",
     "knex":"knex"
   },
   "dependencies": {
