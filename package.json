@@ -1,6 +1,7 @@
 {
   "scripts": {
     "db:migration:run": "knex migrate:latest",
+    "prestart":"knex migrate:latest",
     "knex":"knex"
   },
   "dependencies": {
