@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "db:migration:run": "knex migrate:latest --env aws_env",
     "postinstall": "knex migrate:latest --env aws_env",
     "knex": "knex"
   },
