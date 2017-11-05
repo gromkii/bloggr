@@ -25,6 +25,21 @@ module.exports = {
     }
   },
 
+  aws: {
+    client:'pg',
+    connection:{
+      database:process.env.DB_NAME,
+      host:process.env.DB_HOST,
+      port:process.env.DB_PORT,
+      user:process.env.DB_USERNAME,
+      password:process.env.DB_PASSWORD
+    },
+    migrations: {
+      tableName: 'knex_migrations',
+      directory: __dirname + '/migrations'
+    }
+  },
+
   production: {
     client: 'postgresql',
     connection: process.env.DATABASE_URL,
@@ -34,23 +49,6 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations'
-    }
-  },
-
-  aws_env: {
-    client: 'postgresql',
-    connection: {
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      user: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
-    },
-    migrations: {
-      directory: __dirname + '/migrations'
-    },
-    seeds: {
-      directory: __dirname + '/seeds'
     }
   }
 };
