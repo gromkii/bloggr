@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "prestart":"node ./node_modules/knex/lib/bin/cli.js migrate:latest",
-    "poststart":"node -e \"console.log('Start complete')\"",
+    "postinstall":"node ./node_modules/knex/lib/bin/cli.js migrate:latest",
     "knex":"knex"
   },
   "dependencies": {
