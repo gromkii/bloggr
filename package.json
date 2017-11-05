@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall":"node ./node_modules/knex/lib/bin/cli.js migrate:latest",
+    "postinstall":"node ./node_modules/knex/bin/cli.js migrate:latest",
     "knex":"knex"
   },
   "dependencies": {
