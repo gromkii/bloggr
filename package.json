@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall": "knex migrate:latest --env aws_env; knex seed:run",
+    "postinstall": "knex migrate:latest --env aws_env",
     "knex": "knex"
   },
   "dependencies": {
